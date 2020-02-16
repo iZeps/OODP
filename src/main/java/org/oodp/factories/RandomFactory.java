@@ -6,7 +6,14 @@ import java.util.Random;
 
 public class RandomFactory {
 
-    List<TetraminoFactory> factoryList = Arrays.asList(new IBlockFactory(), new OBlockFactory());
+    List<TetraminoFactory> factoryList = Arrays.asList(
+            new IBlockFactory(),
+            new OBlockFactory(),
+            new SBlockFactory(),
+            new ZBlockFactory(),
+            new JBlockFactory(),
+            new LBlockFactory(),
+            new TBlockFactory());
 
     public TetraminoFactory getRandomBlockFactory() {
         int randomNumber = new Random().nextInt(factoryList.size());
