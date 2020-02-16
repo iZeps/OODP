@@ -15,9 +15,4 @@ public class OBlock implements Tetramino {
     public void setStructure(int[][] structure) {
         this.structure = structure;
     }
-
-    @Override
-    public void display() {
-        System.out.println("██ ██\n██ ██\n");
-    }
 }

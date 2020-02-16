@@ -5,7 +5,4 @@ public interface Tetramino {
     int[][] getStructure();
 
     void setStructure(int[][] structure);
-
-    void display();
-
 }
