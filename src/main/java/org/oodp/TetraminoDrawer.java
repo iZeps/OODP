@@ -7,14 +7,18 @@ import java.util.Random;
 
 import static org.oodp.Rotation.rotateLeft;
 
-public class TetraminoDrawer {
+public class TetraminoDrawer extends SubscriberHandler {
+
+    Tetramino tetramino;
 
     public void  displayTetramino(TetraminoFactory tf) {
-        Tetramino tetramino = tf.createTetramino();
+        tetramino = tf.createTetramino();
         Parser tetraminoParser = new Parser();
         Random random = new Random();
 
         rotateXTimes(tetramino,random.nextInt(3));
+
+        notifySubscribers(tetramino.getClass().getName());
 
         System.out.println(tetraminoParser.parseTetraminoStructure(tetramino));
     }

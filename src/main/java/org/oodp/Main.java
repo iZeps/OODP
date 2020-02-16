@@ -7,10 +7,12 @@ public class Main {
 
         RandomFactory randomFactory = new RandomFactory();
         TetraminoDrawer tetraminoDrawer = new TetraminoDrawer();
+        Recorder recorder = new Recorder(tetraminoDrawer);
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             tetraminoDrawer.displayTetramino(randomFactory.getRandomBlockFactory());
-            Thread.sleep(1000);
+            Thread.sleep(100);
         }
+        recorder.printStatistics();
     }
 }
